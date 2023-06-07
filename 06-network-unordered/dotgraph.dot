@@ -1,0 +1,28 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aci_bridge_domain.terraform_bd (expand)" [label = "aci_bridge_domain.terraform_bd", shape = "box"]
+		"[root] aci_subnet.terraform_bd_subnet (expand)" [label = "aci_subnet.terraform_bd_subnet", shape = "box"]
+		"[root] aci_tenant.terraform_tenant (expand)" [label = "aci_tenant.terraform_tenant", shape = "box"]
+		"[root] aci_vrf.terraform_vrf (expand)" [label = "aci_vrf.terraform_vrf", shape = "box"]
+		"[root] provider[\"registry.terraform.io/ciscodevnet/aci\"]" [label = "provider[\"registry.terraform.io/ciscodevnet/aci\"]", shape = "diamond"]
+		"[root] var.bd" [label = "var.bd", shape = "note"]
+		"[root] var.subnet" [label = "var.subnet", shape = "note"]
+		"[root] var.tenant" [label = "var.tenant", shape = "note"]
+		"[root] var.user" [label = "var.user", shape = "note"]
+		"[root] var.vrf" [label = "var.vrf", shape = "note"]
+		"[root] aci_bridge_domain.terraform_bd (expand)" -> "[root] aci_vrf.terraform_vrf (expand)"
+		"[root] aci_bridge_domain.terraform_bd (expand)" -> "[root] var.bd"
+		"[root] aci_subnet.terraform_bd_subnet (expand)" -> "[root] aci_bridge_domain.terraform_bd (expand)"
+		"[root] aci_subnet.terraform_bd_subnet (expand)" -> "[root] var.subnet"
+		"[root] aci_tenant.terraform_tenant (expand)" -> "[root] provider[\"registry.terraform.io/ciscodevnet/aci\"]"
+		"[root] aci_tenant.terraform_tenant (expand)" -> "[root] var.tenant"
+		"[root] aci_vrf.terraform_vrf (expand)" -> "[root] aci_tenant.terraform_tenant (expand)"
+		"[root] aci_vrf.terraform_vrf (expand)" -> "[root] var.vrf"
+		"[root] provider[\"registry.terraform.io/ciscodevnet/aci\"] (close)" -> "[root] aci_subnet.terraform_bd_subnet (expand)"
+		"[root] provider[\"registry.terraform.io/ciscodevnet/aci\"]" -> "[root] var.user"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/ciscodevnet/aci\"] (close)"
+	}
+}
+
