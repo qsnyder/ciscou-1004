@@ -28,7 +28,7 @@ This step will download the provider declared in the top of the `main.tf` file a
 
 This step will combine all `.tf` files to create a single set of steps that need to be applied on the remote device.  If this is a secondary run of the project, this step will also compare the existing stored state to validate the requested changes against the state that Terraform is aware of and make the appropriate changes as necessary.  These steps will then be saved to a "plan" file, which will be executed by the apply step.  This ensures that any changes made to the Terraform files after the plan was created will not impact the subsequent configuration done in the `apply` step
 
-### `terraform apply "tf.plan"
+### `terraform apply "tf.plan"`
 
 This step will take the perscriptive steps created within the `plan` step and perform the desired configuration changes on the endpoint target of the Terraform file.  Depending on connectivity and size of changes to be made, this can take a bit of time to perform.
 
