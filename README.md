@@ -51,4 +51,4 @@ This file contains a Terraform command which, when invoked (assuming the correct
 
 ## Questions/Comments
 
-Please reach out to me via DM on Twitter (@qsnyder)[https://twitter.com/qsnyder]
+Please reach out to me via DM on Twitter [@qsnyder](https://twitter.com/qsnyder)
