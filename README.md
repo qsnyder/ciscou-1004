@@ -4,9 +4,9 @@ This repository will serve as the collection point for all code used for the CIS
 
 ## Prerequisites
 
-These Terraform files are built to interact with an ACI fabric, and preconfigured to connect to an instance of the ACI 5.2 reservable sandbox within DevNet.  This sandbox can be reserved by following (this hyperlink)[https://devnetsandbox.cisco.com/RM/Diagram/Index/4eaa9878-3e74-4105-b26a-bd83eeaa6cd9?diagramType=Topology].  However, it is possible to modify the Terraform to point towards any arbitrary fabric, assuming that is reachable by the workstation on which you will execute the Terraform HCL files.
+These Terraform files are built to interact with an ACI fabric, and preconfigured to connect to an instance of the ACI 5.2 reservable sandbox within DevNet.  This sandbox can be reserved by following [this hyperlink](https://devnetsandbox.cisco.com/RM/Diagram/Index/4eaa9878-3e74-4105-b26a-bd83eeaa6cd9?diagramType=Topology).  However, it is possible to modify the Terraform to point towards any arbitrary fabric, assuming that is reachable by the workstation on which you will execute the Terraform HCL files.
 
-Additionally, Terraform will need to be downloaded (the link to download is found (here)[http://terraform.io/downloads]) and ideally installed to `$PATH` to ensure that it can be found by the shell easily.  Alternatively, a software such as (`tfenv`)[https://github.com/tfutils/tfenv] can be used to facilitate the easy switching of Terraform versions.  These files have been verified to be function on Terraform 1.4.5.
+Additionally, Terraform will need to be downloaded (the link to download is found [here](http://terraform.io/downloads)) and ideally installed to `$PATH` to ensure that it can be found by the shell easily.  Alternatively, a software such as [`tfenv`](https://github.com/tfutils/tfenv) can be used to facilitate the easy switching of Terraform versions.  These files have been verified to be function on Terraform 1.4.5.
 
 ## Usage
 
